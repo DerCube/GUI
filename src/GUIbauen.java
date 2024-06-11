@@ -17,7 +17,8 @@ public class GUIbauen extends JFrame {
         c = this.getContentPane();
 
         c.setPreferredSize(this.getSize());
-        int ybhhhhh      int x;
+        int y;
+        int x;
         c.setLocation(x=(int)(Math.random()*100),y=(int)(Math.random()*100));
 
         this.setVisible(true);
@@ -36,7 +37,7 @@ public class GUIbauen extends JFrame {
 
     public static void main(String[] args) {
 
-        int x = 100000000000;
+        int x = 1000000000;
         for (int i = 0; i < x; i++) {
 
             GUIbauen gb = new GUIbauen();
