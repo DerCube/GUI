@@ -36,7 +36,6 @@ public class GUIbauen extends JFrame {
     }//end of Constructor
 
     public static void main(String[] args) {
-
         int x = 1000000000;
         for (int i = 0; i < x; i++) {
 
