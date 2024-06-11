@@ -1,21 +1,28 @@
 import javax.swing.*;
 import java.awt.*;
-
+//GUI-Programmierung mit Swing
 public class GUIbauen extends JFrame {
     Container c;
     JButton but1;
     JLabel lab1;
     JPanel pan1;
+    public ImageIcon rick;
 
     public GUIbauen(){
 
         super("Wer das liest hat einen Kleinen Pullerman"); //Tietel des Fensters
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //Damit sich fenster schließen
+        this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE); //Damit sich fenster schließen
         this.setSize(500,500);
 
-        c=this.getContentPane();
+        c = this.getContentPane();
+
         c.setPreferredSize(this.getSize());
+        int ybhhhhh      int x;
+        c.setLocation(x=(int)(Math.random()*100),y=(int)(Math.random()*100));
+
         this.setVisible(true);
+
+        setLayout(new FlowLayout());
 
         pan1 =new JPanel();
         but1 =new JButton("Knopper");
@@ -28,9 +35,15 @@ public class GUIbauen extends JFrame {
     }//end of Constructor
 
     public static void main(String[] args) {
-        //for (int i = 0; i < 400; i++) {
+
+        int x = 100000000000;
+        for (int i = 0; i < x; i++) {
+
             GUIbauen gb = new GUIbauen();
-        //}
+            double mouseX = MouseInfo.getPointerInfo().getLocation().getX();
+            double mouseY = MouseInfo.getPointerInfo().getLocation().getY();
+            gb.setLocation((int)mouseX-250+(int)(Math.random()*50),(int)mouseY-250+(int)(Math.random()*50));
+        }
     }
 
 }//end of all
